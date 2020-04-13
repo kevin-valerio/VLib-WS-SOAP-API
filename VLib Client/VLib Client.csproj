@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RESTClient.cs" />
     <Compile Include="Theme.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -142,6 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\VLibSoapService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JCDecaux_API\JCDecaux_API.csproj">
+      <Project>{3E2CBF44-17FB-4DEF-A975-3B99F1DF3085}</Project>
+      <Name>JCDecaux_API</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

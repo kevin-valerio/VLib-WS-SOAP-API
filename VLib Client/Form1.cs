@@ -8,19 +8,27 @@ using VLib_Client.VLibSoapService;
 namespace VLib_Client {
     public partial class Form1 : Form {
         VLibSoapServiceClient SOAPClient = new VLibSoapServiceClient();
-
+        RESTClient rESTClient = new RESTClient();
         public Form1() {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-            SOAPClient.fullFeed();
+            if (isSOAP.Checked) {
+                SOAPClient.fullFeed();
+            } else {
+                rESTClient.fullFeed();
+            }
         }
 
         private void xylosButton1_Click(object sender, EventArgs e) {
-            //On liste toutes les stations disponibles dans la ville entrée
-            Station[] allStations = SOAPClient.getAllStationsIn(xylosTextBox2.Text);
-            
+            Station[] allStations;
+            if (isSOAP.Checked) {
+                allStations = SOAPClient.getAllStationsIn(xylosTextBox2.Text);
+            } else {
+                allStations = rESTClient.getAllStationsIn(xylosTextBox2.Text);
+            }
+
             foreach (Station item in allStations) {
                 xylosCombobox1.Items.Add(item.StationName);
                 showItinaryComponents();
@@ -43,12 +51,21 @@ namespace VLib_Client {
 
         private void xylosCombobox1_SelectedIndexChanged(object sender, EventArgs e) {
             lblStationName.Text = xylosCombobox1.SelectedItem.ToString();
-            lblAddress.Text = SOAPClient.getStationByName(xylosCombobox1.SelectedItem.ToString()).Address;
+
+            if (isSOAP.Checked) {
+                lblAddress.Text = SOAPClient.getStationByName(xylosCombobox1.SelectedItem.ToString()).Address;
+            } else {
+                lblAddress.Text = rESTClient.getStationByName(xylosCombobox1.SelectedItem.ToString()).Address;
+            }
             label1.Visible = true;
         }
 
         private void xylosButton2_Click(object sender, EventArgs e) {
-            SOAPClient.fullFeed();
+            if (isSOAP.Checked) {
+                SOAPClient.fullFeed();
+            } else {
+                rESTClient.fullFeed();
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
@@ -72,21 +89,20 @@ namespace VLib_Client {
  
                 }               
             }            
-        }
-
-        private String UnicodeToUTF8String(String content) {
-
-            byte[] asciiBytes = Encoding.Convert(Encoding.Unicode, Encoding.ASCII, Encoding.Unicode.GetBytes(content));
-            char[] asciiChars = new char[Encoding.ASCII.GetCharCount(asciiBytes, 0, asciiBytes.Length)];
-            Encoding.ASCII.GetChars(asciiBytes, 0, asciiBytes.Length, asciiChars, 0);
-            return new string(asciiChars);
-        }
+        } 
 
         private void xylosButton5_Click(object sender, EventArgs e) {
+            listView1.Items.Clear();
             listView1.Visible = true;
-            pictureBox1.Visible = false; 
+            pictureBox1.Visible = false;
+            Step[] instructions;
+            if (isSOAP.Checked) {
+                instructions = SOAPClient.getInstructions(radioPedestrian.Checked ? true : false, xylosTextBox2.Text, xylosTextBox1.Text);
+            } else {
+                instructions = rESTClient.getInstructions(radioPedestrian.Checked ? true : false, xylosTextBox2.Text, xylosTextBox1.Text);
+            }
 
-            foreach (Step instruction in SOAPClient.getInstructions(radioPedestrian.Checked ? true : false, xylosTextBox2.Text, xylosTextBox1.Text)) {
+            foreach (Step instruction in instructions) {
                 listView1.Items.Add(new ListViewItem(
                     new[] {
                         Regex.Replace(instruction.html_instructions, "<.*?>", String.Empty),
@@ -94,7 +110,14 @@ namespace VLib_Client {
                         instruction.duration.text 
                     } )); 
             }
+        }
 
+        private void isSOAP_CheckedChanged(object sender, EventArgs e) {
+            if(isSOAP.Checked)
+                 label8.Text = "Current used protocol : REST";
+            else
+                label8.Text = "Current used protocol : SOAP";
         }
     }
+     
 }

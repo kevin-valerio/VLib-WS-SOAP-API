@@ -33,6 +33,10 @@ namespace VLib_WSSOAP_API {
                 JCDecaux_Stations_API.getInstance.setAPI(API_KEY);
                 JCDecaux_Stations_API.getInstance.setCity(""); //no city, we want everything
 
+                /*This is the caching system. We get all the data one for all, and store it into our JCDecaux instance. 
+                Then we just need to call the following method in order to get data, 
+                so the real JCDecaux servers won't be "spammed" of requests.*/
+
                 JCDecaux_Stations_API.getInstance.feedStations();
                 JCDecaux_Contracts_API.getInstance.feedContracts();
             } catch (Exception error) {
@@ -40,13 +44,7 @@ namespace VLib_WSSOAP_API {
                 return false;
             }
             return true;
-        }
-
-
-        /*This is the caching system. We get all the data one for all, and store it into our JCDecaux instance. 
-        Then we just need to call the following method in order to get data, 
-        so the real JCDecaux servers won't be "spammed" of requests.*/
-
+        } 
 
         /// <summary>Get all contracts</summary>
 
@@ -127,8 +125,6 @@ namespace VLib_WSSOAP_API {
             }
             return null;
         }
-
- 
 
         List<Step> IVLibSoapService.getInstructions(bool isPedestrian, string srcAddress, string destAddres) {
 

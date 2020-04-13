@@ -12,3 +12,5 @@ C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib
 C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.exe
 C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.pdb
 C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\App.REAL.config
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\JCDecaux_API.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\JCDecaux_API.pdb

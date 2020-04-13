@@ -4,29 +4,31 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 
 namespace VLib_WSSOAP_API {
     [ServiceContract]
     public interface IVLibSoapService {
 
         [OperationContract]
+        [WebInvoke(Method ="GET", ResponseFormat =WebMessageFormat.Json)]
         bool fullFeed();
-
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
         [OperationContract]
         List<JCDecaux_API.Contract> getContracts();
-
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
         [OperationContract]
         List<JCDecaux_API.Station> getStations();
-
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
         [OperationContract]
         List<JCDecaux_API.Station> getAllStationsIn(string city);
-
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
         [OperationContract]
         Bitmap getStaticMapImage(bool isPedestrian, String srcAddress, String destAddres, bool ignoreException);
-
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
         [OperationContract]
         JCDecaux_API.Station getStationByName(String name);
-
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
         [OperationContract]
         List<Step> getInstructions(bool isPedestrian, String srcAddress, String destAddres);
 

@@ -26,9 +26,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.xylosTabControl1 = new XylosTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.isSOAP = new XylosCheckBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.xylosButton5 = new XylosButton();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioBike = new XylosRadioButton();
             this.radioPedestrian = new XylosRadioButton();
@@ -50,11 +57,6 @@
             this.xylosSeparator3 = new XylosSeparator();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.xylosButton5 = new XylosButton();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.xylosTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -77,11 +79,14 @@
             this.xylosTabControl1.Name = "xylosTabControl1";
             this.xylosTabControl1.SelectedIndex = 0;
             this.xylosTabControl1.Size = new System.Drawing.Size(622, 539);
+            this.xylosTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.xylosTabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.isSOAP);
             this.tabPage1.Controls.Add(this.lblAddress);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -101,6 +106,28 @@
             this.tabPage1.Size = new System.Drawing.Size(434, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Routes calculator";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(261, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(162, 15);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Current used protocol : SOAP";
+            // 
+            // isSOAP
+            // 
+            this.isSOAP.Checked = true;
+            this.isSOAP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.isSOAP.EnabledCalc = true;
+            this.isSOAP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isSOAP.Location = new System.Drawing.Point(15, 99);
+            this.isSOAP.Name = "isSOAP";
+            this.isSOAP.Size = new System.Drawing.Size(246, 18);
+            this.isSOAP.TabIndex = 17;
+            this.isSOAP.Text = "Using SOAP if checked. Else, using REST";
+            this.isSOAP.CheckedChanged += new XylosCheckBox.CheckedChangedEventHandler(this.isSOAP_CheckedChanged);
             // 
             // lblAddress
             // 
@@ -142,6 +169,52 @@
             this.groupBox1.Text = "Routes";
             this.groupBox1.Visible = false;
             // 
+            // xylosButton5
+            // 
+            this.xylosButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.xylosButton5.EnabledCalc = true;
+            this.xylosButton5.Location = new System.Drawing.Point(305, 56);
+            this.xylosButton5.Name = "xylosButton5";
+            this.xylosButton5.Size = new System.Drawing.Size(116, 29);
+            this.xylosButton5.TabIndex = 17;
+            this.xylosButton5.Text = "Get instructions";
+            this.xylosButton5.Click += new XylosButton.ClickEventHandler(this.xylosButton5_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(-1, 90);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(430, 206);
+            this.listView1.TabIndex = 18;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Instruction";
+            this.columnHeader1.Width = 283;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Distance";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 67;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Duration";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 75;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(1, 91);
@@ -157,7 +230,7 @@
             this.radioBike.Checked = true;
             this.radioBike.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioBike.EnabledCalc = true;
-            this.radioBike.Location = new System.Drawing.Point(198, 67);
+            this.radioBike.Location = new System.Drawing.Point(198, 66);
             this.radioBike.Name = "radioBike";
             this.radioBike.Size = new System.Drawing.Size(91, 18);
             this.radioBike.TabIndex = 16;
@@ -230,12 +303,12 @@
             this.xylosTextBox2.EnabledCalc = true;
             this.xylosTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.xylosTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(133)))), ((int)(((byte)(142)))));
-            this.xylosTextBox2.Location = new System.Drawing.Point(13, 66);
+            this.xylosTextBox2.Location = new System.Drawing.Point(11, 57);
             this.xylosTextBox2.MaxLength = 32767;
             this.xylosTextBox2.MultiLine = false;
             this.xylosTextBox2.Name = "xylosTextBox2";
             this.xylosTextBox2.ReadOnly = false;
-            this.xylosTextBox2.Size = new System.Drawing.Size(279, 31);
+            this.xylosTextBox2.Size = new System.Drawing.Size(281, 31);
             this.xylosTextBox2.TabIndex = 8;
             this.xylosTextBox2.Text = "Enter your city name to list all the availables bike";
             this.xylosTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -288,7 +361,7 @@
             // 
             this.xylosSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xylosSeparator1.Location = new System.Drawing.Point(13, 114);
+            this.xylosSeparator1.Location = new System.Drawing.Point(13, 128);
             this.xylosSeparator1.Name = "xylosSeparator1";
             this.xylosSeparator1.Size = new System.Drawing.Size(417, 2);
             this.xylosSeparator1.TabIndex = 3;
@@ -298,7 +371,7 @@
             // 
             this.xylosButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.xylosButton1.EnabledCalc = true;
-            this.xylosButton1.Location = new System.Drawing.Point(310, 67);
+            this.xylosButton1.Location = new System.Drawing.Point(310, 58);
             this.xylosButton1.Name = "xylosButton1";
             this.xylosButton1.Size = new System.Drawing.Size(116, 29);
             this.xylosButton1.TabIndex = 1;
@@ -412,52 +485,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "About";
             // 
-            // listView1
-            // 
-            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Default;
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(-1, 90);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(430, 206);
-            this.listView1.TabIndex = 18;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // xylosButton5
-            // 
-            this.xylosButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xylosButton5.EnabledCalc = true;
-            this.xylosButton5.Location = new System.Drawing.Point(305, 56);
-            this.xylosButton5.Name = "xylosButton5";
-            this.xylosButton5.Size = new System.Drawing.Size(116, 29);
-            this.xylosButton5.TabIndex = 17;
-            this.xylosButton5.Text = "Get instructions";
-            this.xylosButton5.Click += new XylosButton.ClickEventHandler(this.xylosButton5_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Instruction";
-            this.columnHeader1.Width = 283;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Distance";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 67;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Duration";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 75;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,6 +542,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private XylosCheckBox isSOAP;
+        private System.Windows.Forms.Label label8;
     }
 }
 
