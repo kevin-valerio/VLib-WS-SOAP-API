@@ -87,9 +87,12 @@ namespace VLib_Client {
             pictureBox1.Visible = false; 
 
             foreach (Step instruction in SOAPClient.getInstructions(radioPedestrian.Checked ? true : false, xylosTextBox2.Text, xylosTextBox1.Text)) {
-                listView1.Items.Add(new ListViewItem(Regex.Replace(instruction.html_instructions, "<.*?>", String.Empty)));
-                listView1.Items.Add(new ListViewItem(instruction.distance.text));
-                listView1.Items.Add(new ListViewItem(instruction.duration.text));
+                listView1.Items.Add(new ListViewItem(
+                    new[] {
+                        Regex.Replace(instruction.html_instructions, "<.*?>", String.Empty),
+                        instruction.distance.text,
+                        instruction.duration.text 
+                    } )); 
             }
 
         }

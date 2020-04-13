@@ -34,15 +34,23 @@
   </xs:complexType>
   <xs:element name="Duration2" nillable="true" type="tns:Duration2" />
   <xs:complexType name="EndLocation2">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
   </xs:complexType>
   <xs:element name="EndLocation2" nillable="true" type="tns:EndLocation2" />
   <xs:complexType name="Polyline">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="points" nillable="true" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:element name="Polyline" nillable="true" type="tns:Polyline" />
   <xs:complexType name="StartLocation2">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
   </xs:complexType>
   <xs:element name="StartLocation2" nillable="true" type="tns:StartLocation2" />
 </xs:schema>

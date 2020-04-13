@@ -77,12 +77,9 @@ namespace VLib_WSSOAP_API {
             String FULL_GMAP_URL = "https://maps.googleapis.com/maps/api/directions/json?origin=" + srcAddress
                 + "&destination=" + destAddress + "&mode=" + mode + "&key=" + GOOGLEMAP_API_KEY;
 
-
-            WebClient wc = new WebClient();
-            var json = wc.DownloadString(FULL_GMAP_URL);
-
-            object obj = JsonConvert.DeserializeObject<Direction>(json);
-            return obj;
+           
+            var json = new WebClient().DownloadString(FULL_GMAP_URL);
+            return JsonConvert.DeserializeObject<Direction>(json);
         }
 
         /// <summary>Return a static image of the direction from an address to another</summary>

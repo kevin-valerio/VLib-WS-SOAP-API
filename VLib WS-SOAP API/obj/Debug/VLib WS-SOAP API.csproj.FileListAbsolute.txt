@@ -10,3 +10,5 @@ C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib
 C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.csproj.CopyComplete
 C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.dll
 C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.pdb
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\System.Private.DataContractSerialization.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\System.Reflection.TypeExtensions.dll
