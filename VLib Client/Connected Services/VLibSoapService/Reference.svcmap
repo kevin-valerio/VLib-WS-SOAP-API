@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="93d0e807-f982-4bd7-bb0e-776a380ef23d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="76af7c11-f53d-444d-9b4b-b752c651e8ba" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="baa1dd4e-f3b2-42bf-9406-65c4eceadf6b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="872114d9-a441-4467-a7d2-39cf8673d88d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd3" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="84154928-3f0b-4ff0-b15c-ecf922659a0a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd0" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="f68e1f8c-ea2e-48bd-89ed-3853922cd3ca" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd1" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="f8395977-591c-4299-a042-e5058b3e780f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd4" />
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="ce32c3d2-1e0b-4a50-84a3-4424ec44d18f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd5" />
+    <MetadataFile FileName="VLibSoapService.wsdl" MetadataType="Wsdl" ID="da0a2edb-ef6f-425b-9d44-e5e44a315a84" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,14 @@
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib_Client.Form1.resources
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib_Client.Properties.Resources.resources
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.csproj.GenerateResource.cache
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.csprojAssemblyReference.cache
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\VLib Client.exe.config
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\VLib Client.exe
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\VLib Client.pdb
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.csproj.CopyComplete
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.exe
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\obj\Debug\VLib Client.pdb
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib Client\bin\Debug\App.REAL.config

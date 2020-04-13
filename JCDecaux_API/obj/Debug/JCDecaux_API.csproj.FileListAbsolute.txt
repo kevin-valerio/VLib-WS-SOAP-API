@@ -1,0 +1,9 @@
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\bin\Debug\JCDecaux_API.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\bin\Debug\JCDecaux_API.pdb
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\obj\Debug\JCDecaux_API.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\obj\Debug\JCDecaux_API.csproj.CopyComplete
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\obj\Debug\JCDecaux_API.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\obj\Debug\JCDecaux_API.pdb
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\JCDecaux_API\obj\Debug\JCDecaux_API.csprojAssemblyReference.cache

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VLibSoapService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JCDecaux_API" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/VLib_WSSOAP_API" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVLibSoapService_fullFeed_InputMessage">
+    <wsdl:part name="parameters" element="tns:fullFeed" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_fullFeed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fullFeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getContracts_InputMessage">
+    <wsdl:part name="parameters" element="tns:getContracts" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getContracts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getContractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getStations_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStations" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getStations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getAllStationsIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllStationsIn" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getAllStationsIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllStationsInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getStaticMapImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStaticMapImage" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getStaticMapImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStaticMapImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getStationByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStationByName" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getStationByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStationByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getInstructions_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInstructions" />
+  </wsdl:message>
+  <wsdl:message name="IVLibSoapService_getInstructions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInstructionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVLibSoapService">
+    <wsdl:operation name="fullFeed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVLibSoapService/fullFeed" message="tns:IVLibSoapService_fullFeed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVLibSoapService/fullFeedResponse" message="tns:IVLibSoapService_fullFeed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getContracts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVLibSoapService/getContracts" message="tns:IVLibSoapService_getContracts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVLibSoapService/getContractsResponse" message="tns:IVLibSoapService_getContracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVLibSoapService/getStations" message="tns:IVLibSoapService_getStations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVLibSoapService/getStationsResponse" message="tns:IVLibSoapService_getStations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllStationsIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVLibSoapService/getAllStationsIn" message="tns:IVLibSoapService_getAllStationsIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVLibSoapService/getAllStationsInResponse" message="tns:IVLibSoapService_getAllStationsIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStaticMapImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVLibSoapService/getStaticMapImage" message="tns:IVLibSoapService_getStaticMapImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVLibSoapService/getStaticMapImageResponse" message="tns:IVLibSoapService_getStaticMapImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStationByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVLibSoapService/getStationByName" message="tns:IVLibSoapService_getStationByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVLibSoapService/getStationByNameResponse" message="tns:IVLibSoapService_getStationByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInstructions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVLibSoapService/getInstructions" message="tns:IVLibSoapService_getInstructions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVLibSoapService/getInstructionsResponse" message="tns:IVLibSoapService_getInstructions_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="httpEndpoint" type="tns:IVLibSoapService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="fullFeed">
+      <soap:operation soapAction="http://tempuri.org/IVLibSoapService/fullFeed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContracts">
+      <soap:operation soapAction="http://tempuri.org/IVLibSoapService/getContracts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStations">
+      <soap:operation soapAction="http://tempuri.org/IVLibSoapService/getStations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllStationsIn">
+      <soap:operation soapAction="http://tempuri.org/IVLibSoapService/getAllStationsIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStaticMapImage">
+      <soap:operation soapAction="http://tempuri.org/IVLibSoapService/getStaticMapImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStationByName">
+      <soap:operation soapAction="http://tempuri.org/IVLibSoapService/getStationByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInstructions">
+      <soap:operation soapAction="http://tempuri.org/IVLibSoapService/getInstructions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VLibSoapService">
+    <wsdl:port name="httpEndpoint" binding="tns:httpEndpoint">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/httpEndpoint" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

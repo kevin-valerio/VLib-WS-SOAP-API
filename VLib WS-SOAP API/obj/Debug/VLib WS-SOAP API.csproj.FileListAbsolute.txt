@@ -1,0 +1,12 @@
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\VLib WS-SOAP API.dll.config
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\VLib WS-SOAP API.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\VLib WS-SOAP API.pdb
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\JCDecaux_API.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\JCDecaux_API.pdb
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.csprojAssemblyReference.cache
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.csproj.CopyComplete
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.dll
+C:\Users\Utilisateur\Desktop\Web Services\VLib WS-SOAP API\VLib WS-SOAP API\VLib WS-SOAP API\obj\Debug\VLib WS-SOAP API.pdb

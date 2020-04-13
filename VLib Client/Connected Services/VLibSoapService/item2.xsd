@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JCDecaux_API" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/VLibAPI/SOAP/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/VLib_WSSOAP_API" />
+  <xs:element name="fullFeed">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fullFeedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fullFeedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getContracts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getContractsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JCDecaux_API" minOccurs="0" name="getContractsResult" nillable="true" type="q1:ArrayOfContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStations">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JCDecaux_API" minOccurs="0" name="getStationsResult" nillable="true" type="q2:ArrayOfStation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllStationsIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllStationsInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JCDecaux_API" minOccurs="0" name="getAllStationsInResult" nillable="true" type="q3:ArrayOfStation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStaticMapImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isPedestrian" type="xs:boolean" />
+        <xs:element minOccurs="0" name="srcAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destAddres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ignoreException" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStaticMapImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="getStaticMapImageResult" nillable="true" type="q4:Bitmap" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStationByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStationByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JCDecaux_API" minOccurs="0" name="getStationByNameResult" nillable="true" type="q5:Station" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInstructions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isPedestrian" type="xs:boolean" />
+        <xs:element minOccurs="0" name="srcAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destAddres" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInstructionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/VLib_WSSOAP_API" minOccurs="0" name="getInstructionsResult" nillable="true" type="q6:ArrayOfStep" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
